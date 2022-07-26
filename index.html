@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style_slider.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_f.css" />
+
+   
+    <title>Travel Portal</title>
+  </head>
+
+  <body class="body">
+    <main class="main">
+      <div class="modals">
+        <div class="mod_lap">
+          <div class="login modal" data-target="login">
+            <div class="login-overlay">
+              <div class="login-popup__container login-container">
+                <p class="login-popup__text-1 aleo-700-normal">
+                  Log in&nbsp;to&nbsp;your account
+                </p>
+                <button
+                  class="login-popup__button-fb red-hat-text button-click"
+                >
+                  <img
+                    src="img/svg/facebook.svg"
+                    alt="facebook_svg"
+                    width="23"
+                  />
+                  Sign In&nbsp;with Facebook
+                </button>
+                <button
+                  class="login-popup__button-google red-hat-text button-click"
+                >
+                  <img
+                    src="img/svg/google.svg"
+                    alt="google_svg"
+                    width="23"
+                  />
+                  Sign In&nbsp;with Google
+                </button>
+                <div class="login-popup__or">
+                  <hr class="login-popup__hr-1" />
+                  <span class="login-popup__or-text aleo-700-normal"> or </span>
+                  <hr class="login-popup__hr-2" />
+                </div>
+                <form class="login-form">
+                  <div class="login-form__email">
+                    <p class="login-form__email-text aleo-400-normal">E-mail</p>
+                    <input
+                      class="login-form__email-input red-hat-text"
+                      type="email"
+                      name="login-form__email-input"
+                      id="login-form__email-input"
+                    />
+                  </div>
+                  <div class="login-form__password">
+                    <p class="login-form__password-text aleo-400-normal">
+                      Password
+                    </p>
+                    <input
+                      class="login-form__password-input red-hat-text"
+                      type="password"
+                      name="login-form__password-input"
+                      id="login-form__password-input"
+                    />
+                  </div>
+                  <button
+                    class="login-form__button red-hat-text button-click"
+                    id="signin-button"
+                  >
+                    Sign In
+                  </button>
+                </form>
+                <a
+                  class="login-popup__forgot-pswd aleo-700-normal close-popup closeThis"
+                  href="##"
+                >
+                  <b>Forgot Your Password?</b>
+                </a>
+                <hr class="login-popup__hr-3" />
+                <div class="login-popup__register">
+                  <span class="login-popup__register-text aleo-700-normal"
+                    >Don&rsquo;t have an&nbsp;account?</span
+                  >
+                  <a
+                    class="login-popup__register-href aleo-700-normal btns"
+                    href="##"
+                    data-path="register"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="register modal" data-target="register">
+            <div class="register-popup__container login-container">
+              <p class="register-popup__text-1 aleo-700-normal">
+                Create account
+              </p>
+              <form class="register-form" action="##">
+                <div class="register-form__email">
+                  <p class="register-form__email-text aleo-400-normal">
+                    E-mail
+                  </p>
+                  <input
+                    class="register-form__email-input red-hat-text"
+                    type="email"
+                    name="register-form__email-input"
+                    id="register-form__email-input"
+                  />
+                </div>
+                <div class="register-form__password">
+                  <p class="register-form__password-text aleo-400-normal">
+                    Password
+                  </p>
+                  <input
+                    class="register-form__password-input red-hat-text"
+                    type="password"
+                    name="register-form__password-input"
+                    id="register-form__password-input"
+                  />
+                </div>
+                <button
+                  class="register-form__button red-hat-text button-click"
+                  href="##"
+                >
+                  Sign Up
+                </button>
+              </form>
+              <hr class="register-popup__hr-1" />
+              <div class="register-popup__have-account aleo-700-normal">
+                <span class="register-popup__have-account-text">
+                  Already have an&nbsp;account?
+                </span>
+                <a
+                  class="register-popup__have-account-href popup-link btns"
+                  href="##"
+                  data-path="login"
+                >
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="burger modal" data-target="burger">
+            <ul class="menu" id="menu">
+              <a class="menu__close-button closeThis">
+                <img src="img/svg/cross.svg" alt="close_popup" />
+              </a>
+              <li class="red-hat-text">
+                <a class="closeThis" href="#preview" data-path="links"
+                  >How It Works</a
+                >
+              </li>
+              <li class="red-hat-text">
+                <a class="closeThis" href="#steps">Plan Your Trip</a>
+              </li>
+              <li class="red-hat-text">
+                <a class="closeThis" href="#destinations">Destinations</a>
+              </li>
+              <li class="red-hat-text">
+                <a class="closeThis" href="#stories">Travel Stories</a>
+              </li>
+              <li class="red-hat-text">
+                <a class="btns" href="#login-popup" data-path="login"
+                  >Account</a
+                >
+              </li>
+              <li class="red-hat-text">
+                <a class="closeThis" href="#footer">Social Media</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__background">
+        <div class="main__background-shadow">
+          <nav class="navbar">
+            <div class="container">
+              <div class="navbar__wrap">
+                <div class="hamb btns" data-path="burger">
+                  <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div>
+                </div>
+                <a href="https://github.com/k3ttrin" target="_blank" id="logo">
+                  <img src="img/svg/logo.svg" alt="logo_svg" />
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="popup" id="popup"></div>
+
+          <header class="header">
+            <div class="container header__coutainer">
+              <div class="header__logo">
+                <img class="logo" src="img/svg/logo.svg" alt="logo_svg" />
+                <p class="header__text">Travel Portal</p>
+              </div>
+              <nav class="nav-desc">
+                <ul class="nav-desc__ul">
+                  <li class="red-hat-text">
+                    <a href="#preview">How It&nbsp;Works</a>
+                  </li>
+                  <li class="red-hat-text">
+                    <a href="#steps">Plan Your Trip</a>
+                  </li>
+                  <li class="red-hat-text">
+                    <a href="#destinations">Destinations</a>
+                  </li>
+                  <li class="red-hat-text">
+                    <a href="#stories">Travel Stories</a>
+                  </li>
+                </ul>
+              </nav>
+              <button
+                class="header__button red-hat-text btns"
+                data-path="login"
+              >
+                Login
+              </button>
+            </div>
+          </header>
+
+          <section class="preview" id="preview">
+            <div class="container preview__countainer">
+              <h1 class="preview__text aleo-700-normal">
+                Explore&nbsp;the beauty&nbsp;of the&nbsp;World
+              </h1>
+              <p class="preview__text aleo-700-italic">
+                Receive personalized recommendations for countries, hotels,
+                activities and more
+              </p>
+              <form class="preview__form aleo-400-italic">
+                <input
+                  type="search"
+                  placeholder="What would you like to&nbsp;do?"
+                />
+                <button
+                  class="preview__button red-hat-text button-click btns"
+                  data-path="dont-working"
+                >
+                  Start Planning
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="steps" id="steps">
+        <div class="container steps__container">
+          <h2 class="red-hat-text">
+            3&nbsp;STEPS TO&nbsp;THE PERFECT&nbsp;TRIP
+          </h2>
+          <div class="steps__ul">
+            <ul class="img">
+              <li>
+                <div class="img__countainer img__first">
+                  <img
+                    class="img-velo"
+                    src="img/svg/Vectorbike1.svg"
+                    alt="velo_svg"
+                  />
+                </div>
+                <span class="aleo-400-normal img__li-1"
+                  >Tell&nbsp;us&nbsp;what&nbsp;you want&nbsp;to&nbsp;do</span
+                >
+              </li>
+              <li>
+                <div class="img__countainer img__second">
+                  <img
+                    class="img-callendar"
+                    src="img/svg/Vectordate1.svg"
+                    alt="callendar_svg"
+                  />
+                </div>
+                <span class="aleo-400-normal img__li-2"
+                  >Share&nbsp;us preferable dates</span
+                >
+              </li>
+              <li>
+                <div class="img__countainer img__third">
+                  <img
+                    class="img-airaplane"
+                    src="img/svg/Vectorplane1.svg"
+                    alt="velo_svg"
+                  />
+                </div>
+                <span class="aleo-400-normal img__li-3"
+                  >We&nbsp;will give you recommendations</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="destinations" id="destinations">
+        <div class="destinations__container container">
+          <h2 class="red-hat-text">POPULAR DESTINATIONS</h2>
+        </div>
+        <div class="image-slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="destinations__slide-1 swiper-slide">
+              <a class="destinations__link" href="##">
+                <img src="img/destination1.jpg" alt="spain_img" />
+                <p class="red-hat-text">SPAIN</p>
+              </a>
+            </div>
+            <div class="destinations__slide-2 swiper-slide">
+              <a class="destinations__link" href="##">
+                <img src="img/destin2.jpg" alt="japan_img" />
+                <p class="red-hat-text">JAPAN</p>
+              </a>
+            </div>
+            <div class="destinations__slide-3 swiper-slide">
+              <a class="destinations__link" href="##">
+                <img src="img/destination3.jpg" alt="usa_img" />
+                <p class="red-hat-text">USA</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <button
+          class="destinations__button red-hat-text button-click btns"
+          type="button"
+          data-path="dont-working"
+        >
+          <img src="img/svg/Vectorfind_more.svg" alt="arrowButton_svg" />
+          Find More
+        </button>
+      </section>
+
+      <section class="stories stories-footer" id="stories">
+        <h2 class="red-hat-text stories-h2">TRAVEL STORIES</h2>
+        <div class="stories-footer__container">
+          <div class="stories__background">
+            <div class="container stories__container">
+              <ul>
+                <li>
+                  <img
+                    class="stories__img"
+                    src="img/stories_first.jpg"
+                    alt="thailand_jpg"
+                    data-path="imgFull_thailnad"
+                  />
+                  <img
+                    class="stories__img-low"
+                    src="img/mobile_1.jpg"
+                    alt="thailand_jpg"
+                  />
+                  <div class="stories__text">
+                    <h3 class="aleo-400-normal stories__h3">
+                      10&nbsp;Photos of&nbsp;Attractive Thailand
+                    </h3>
+                    <p class="aleo-400-normal stories__p">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis
+                      aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate
+                      velit esse cillum dolore eu&nbsp;fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt
+                      in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est
+                      laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit...
+                    </p>
+                    <p class="aleo-400-normal stories__p-low">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut enim&nbsp;ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip&nbsp;ex&nbsp;ea commodo consequat. Duis
+                      aute irure dolor in reprehenderit in&nbsp;voluptate velit
+                      esse cillum dolore eu&nbsp;fugiat nulla.Lorem ipsum dolor
+                      sit&nbsp;a...
+                    </p>
+                    <a
+                      class="aleo-400-normal stories__href"
+                      href="#stories"
+                      data-target="dont-working"
+                      ><b>Read More</b></a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <img
+                    class="stories__img"
+                    src="img/nation_park.jpg"
+                    alt="utah_jpg"
+                  />
+                  <img
+                    class="stories__img-low"
+                    src="img/mobile_2.jpg"
+                    alt="utah_jpg"
+                  />
+                  <div class="stories__text">
+                    <h3 class="aleo-400-normal stories__h3">
+                      Canyonlands National Park, Utah
+                    </h3>
+                    <p class="aleo-400-normal stories__p">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis
+                      aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate
+                      velit esse cillum dolore eu&nbsp;fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt
+                      in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est
+                      laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit...
+                    </p>
+                    <p class="aleo-400-normal stories__p-low">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut enim&nbsp;ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip&nbsp;ex&nbsp;ea commodo consequat. Duis
+                      aute irure dolor in reprehenderit in&nbsp;voluptate velit
+                      esse cillum dolore eu&nbsp;fugiat nulla.Lorem ipsum dolor
+                      sit&nbsp;a...
+                    </p>
+                    <a class="aleo-400-normal stories__href" href="#stories"
+                      ><b>Read More</b></a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <img
+                    class="stories__img"
+                    src="img/mountains.jpg"
+                    alt="mountain_jpg"
+                  />
+                  <img
+                    class="stories__img-low"
+                    src="img/mobile_3.jpg"
+                    alt="utah_jpg"
+                  />
+                  <div class="stories__text">
+                    <h3 class="aleo-400-normal stories__h3">
+                      I left my heart in the Mountains!
+                    </h3>
+                    <p class="aleo-400-normal stories__p">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis
+                      aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate
+                      velit esse cillum dolore eu&nbsp;fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt
+                      in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est
+                      laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit...
+                    </p>
+                    <p class="aleo-400-normal stories__p-low">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut enim&nbsp;ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip&nbsp;ex&nbsp;ea commodo consequat. Duis
+                      aute irure dolor in reprehenderit in&nbsp;voluptate velit
+                      esse cillum dolore eu&nbsp;fugiat nulla.Lorem ipsum dolor
+                      sit&nbsp;a...
+                    </p>
+                    <a class="aleo-400-normal stories__href" href="#stories"
+                      ><b>Read More</b></a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <img
+                    class="stories__img"
+                    src="img/truck.jpg"
+                    alt="longes_jpg"
+                  />
+                  <img
+                    class="stories__img-low"
+                    src="img/mobile_4.jpg"
+                    alt="longes_jpg"
+                  />
+                  <div class="stories__text">
+                    <h3 class="aleo-400-normal stories__h3">
+                      The Longest journey in&nbsp;my&nbsp;life!
+                    </h3>
+                    <p class="aleo-400-normal stories__p">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis
+                      aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate
+                      velit esse cillum dolore eu&nbsp;fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt
+                      in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est
+                      laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit...
+                    </p>
+                    <p class="aleo-400-normal stories__p-low">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore
+                      et&nbsp;dolore magna aliqua. Ut enim&nbsp;ad&nbsp;minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi
+                      ut&nbsp;aliquip&nbsp;ex&nbsp;ea commodo consequat. Duis
+                      aute irure dolor in reprehenderit in&nbsp;voluptate velit
+                      esse cillum dolore eu&nbsp;fugiat nulla.Lorem ipsum dolor
+                      sit&nbsp;a...
+                    </p>
+                    <a class="aleo-400-normal stories__href" href="#stories"
+                      ><b>Read More</b></a
+                    >
+                  </div>
+                </li>
+              </ul>
+              <button
+                class="stories__button red-hat-text button-click"
+                type="button"
+              >
+                <img
+                  class="stories__btn-img"
+                  src="img/svg/Vectorsee_more.svg"
+                  alt="arrowButton_svg"
+                />
+                See More
+              </button>
+            </div>
+          </div>
+
+          <footer class="footer" id="footer">
+            <div class="container footer__container">
+               <ul class="footer__list-1">
+              </ul> 
+              <p class="red-hat-text">
+                All Rights Reserved &copy;&nbsp;Travel&nbsp;Portal
+              </p>
+              <ul class="footer__list-2">
+                <li>
+                  <a href="https://rs.school/js/" target="_blank">
+                    <img src="img/svg/insta.svg" alt="instagram_svg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/k3ttrin" target="_blank">
+                    <img src="img/svg/youtube.svg" alt="youtube_svg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com">
+                    <img src="img/svg/twitter.svg" alt="twitter_svg" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  
+  </body>
+</html>
